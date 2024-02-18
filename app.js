@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
 
   //final Insertion in tbody
   tableBody.appendChild(tableRow);
-
+  evenOddRows();
   handleSelectedRows();
   handleShowDeleteButton();
 
