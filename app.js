@@ -78,6 +78,7 @@ function evenOddRows() {
 evenOddRows();
 
 // deleting rows
+
 let selectedRow;
 
 deleteButton.addEventListener("click", () => {
