@@ -47,8 +47,9 @@ form.addEventListener("submit", (event) => {
   //final Insertion in tbody
   tableBody.appendChild(tableRow);
 
-  evenOddRows();
   handleSelectedRows();
+  handleShowDeleteButton();
+
   //closing form
   formSection.style.display = "none";
 });
@@ -57,7 +58,8 @@ openForm.addEventListener("click", () => {
   formSection.style.display = "flex";
 });
 
-cancelButton.addEventListener("click", () => {
+cancelButton.addEventListener("click", (event) => {
+  event.preventDefault();
   formSection.style.display = "none";
 });
 
@@ -83,7 +85,9 @@ let selectedRow;
 
 deleteButton.addEventListener("click", () => {
   selectedRow.remove();
+  selectedRow = undefined;
   evenOddRows();
+  handleShowDeleteButton();
 });
 
 function handleSelectedRows() {
@@ -95,8 +99,30 @@ function handleSelectedRows() {
       row.style.backgroundColor = "blue";
       row.style.color = "white";
       selectedRow = row;
+      handleShowDeleteButton();
     });
   });
 }
 
 handleSelectedRows();
+
+// delete button and empty text
+
+function handleShowDeleteButton() {
+  const tableRows = document.querySelectorAll("tbody tr");
+  const emptyText = document.querySelector(".empty-text");
+
+  if (!tableRows.length) {
+    emptyText.innerText = "No Data is Available";
+  } else {
+    emptyText.innerText = "";
+  }
+
+  if (!!selectedRow) {
+    deleteButton.style.display = "block";
+  } else {
+    deleteButton.style.display = "none";
+  }
+}
+
+handleShowDeleteButton();

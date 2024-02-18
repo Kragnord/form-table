@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .form-section {
@@ -24,6 +25,7 @@ th {
   color: white;
   background-color: #37b4c4;
   padding: 10px;
+  min-width: 200px;
 }
 
 td {
