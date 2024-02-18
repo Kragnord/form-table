@@ -83,6 +83,7 @@ let selectedRow;
 
 deleteButton.addEventListener("click", () => {
   selectedRow.remove();
+  evenOddRows();
 });
 
 function handleSelectedRows() {
