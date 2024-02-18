@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="form-section">
+      <form>
+        <label>
+          <p>Name :</p>
+          <input
+            type="text"
+            placeholder="your name"
+            class="name-input"
+            required
+          />
+        </label>
+        <label>
+          <p>Age :</p>
+          <input
+            type="number"
+            placeholder="your age"
+            class="age-input"
+            required
+          />
+        </label>
+        <label>
+          <p>Email :</p>
+          <input
+            type="text"
+            placeholder="your Email"
+            class="email-input"
+            required
+          />
+        </label>
+        <label>
+          <p>City :</p>
+          <input
+            type="text"
+            placeholder="your city"
+            class="city-input"
+            required
+          />
+        </label>
+        <div>
+          <button class="submit-button">Submit</button>
+          <button class="cancel-button">Cancel</button>
+        </div>
+      </form>
+    </section>
+    <section class="table-section">
+      <h1>Table</h1>
+      <button class="open-form">Add a Person</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr>
+            <td>Anthony</td>
+            <td>42</td>
+            <td>ant@gmail.com</td>
+            <td>Brignais</td>
+          </tr>
+          <tr>
+            <td>Anthony</td>
+            <td>42</td>
+            <td>ant@gmail.com</td>
+            <td>Brignais</td>
+          </tr>
+          <tr>
+            <td>Anthony</td>
+            <td>42</td>
+            <td>ant@gmail.com</td>
+            <td>Brignais</td>
+          </tr>
+        </tbody>
+        <button class="delete-button">Delete</button>
+      </table>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
